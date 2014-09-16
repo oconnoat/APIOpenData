@@ -1,0 +1,287 @@
+<!doctype html>
+<!-- Based on impress.js Copyright 2011-2012 Bartek Szopka
+
+Released under the MIT and GPL (version 2 or later) Licenses.
+-->
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title> </title>
+
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="css/impress-base.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/navmenu.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <link rel="stylesheet/less" type="text/css" href="less/style.less">
+
+
+    <link rel="shortcut icon" href="img/favicon.png" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+</head>
+
+<body class="impress-not-supported">
+
+<!--
+    For example this fallback message is only visible when there is `impress-not-supported` class on body.
+-->
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div id="impress">
+
+    <div id="title" class="step" data-x="0" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
+        <h1>Linked Data &amp; the Semantic Web&mdash;Making Human Knowledge Programmable</h1>
+        <h2>Alexander O&apos;Connor, CNGL Centre for Global Intelligent Content, KDEG, School of Computer Science &amp; Statistics, Trinity College Dublin, Ireland.</h2>
+        <h3><i class="fa fa-twitter"></i>@uberalex / <a href="http://www.oconnoat.com/">http://www.oconnoat.com</a></h3>
+    </div>
+    <div id="talkAnatomy" class="step" data-x="1200" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
+        <ul>
+            <li>Markup</li>
+            <li>Querying &amp; Exploring</li>
+            <li>Hosting</li>
+        </ul>
+
+        <div class="notes">
+            <p>45 minutes is actually not a long time to discuss the semantic web. What I'm going to try and focus on is the practical aspects in three areas:</p>
+                <ol><li>marking up documents and designing</li><li>querying linked data online</li><li>hosting linked data</li></ol>
+                <p> I gather most of the audience is at least familiar with the basic concepts. I will therefore only speak about them briefly. I hope to make this a pretty hands-on experience, you can follow the talk at the link above. The slides should be online, and several examples are linked. I would greatly appreciate any feedback, so be sure to hit the Github Repo for the talk! In particular I will want to cover the notions of best-practice, openness and hopefully something that you can use.
+        </div>
+    </div>
+<!-- PART 1 -->
+    <div id="lodwww" class="step" data-x="-1200" data-y="1200">
+        <div id="lodwwwcontent">
+            <img src="robots" />
+        </div>
+        <div class="notes">
+            <p>The real objective of the Linked Data Web is to make a web that is more understandable for computers. Humans communicate in text, big blocks of the stuff, that is very hard to process automatically. We use all sorts of complex linguistic tricks: metaphor, references; we often speak indirectly about things, and it all depends on the fact that we can communicate using a shared context. The goal of structuring linked data is exactly that: how do we establish a common reference model to allow computers to 'read' documents.</p>
+        </div>
+
+    </div>
+    <div id="FerdinandFoch" class="step" data-x="0" data-y="1200">
+        <img src="foch" />
+        <q>"My centre is giving way, my right is in retreat, situation excellent. I attack." ― Ferdinand Foch </q>
+           <div class="notes">
+               <p>Taking Marechal Foch's sentence as an example, what might we want to do to provide context?</p>
+            <ul><li>Battle of the Marne &amp; military terms</li><li>Irony</li><li>Who is Foch?</li><li>quote</li><li>translation</li></ul>
+            </div>
+    </div>
+
+    <div id="meaningtriangle" class="step" data-x="1200" data-y="1200">
+
+        <a href="http://www.jfsowa.com/ontology/ontometa.htm"><img src="http://www.jfsowa.com/figs/yojo.gif" /><span class="caption">>Sowa, J.F. <em>Ontology, Metadata, and Semiotics</span></a>
+        <div class="notes">
+            <p>When humans read a piece of text, what they are doing is looking at labels which they translate into concepts. We have the concept of the Triangle of reference. There's a thing, we have a conceptualisation of that thing, and we communicate that with a symbol. There's lots of complexity there in reconciling the three.</p>
+        </div>
+    </div>
+    <div id="vocabulary" class="step" data-x="2400" data-y="1200">
+        <a href="http://www.rbms.info/committees/bibliographic_standards/controlled_vocabularies/binding/th7.htm">Book Bindings</a>
+        <p>Adhesive bindings,
+Caoutchouc bindings,
+Backless bindings,
+Boards,
+Edges of binding boards,
+Bevelled edge boards,
+Square edge boards,
+Hemp boards,
+Pasteboard,
+Wooden boards,
+Mauchline ware bindings,
+Case bindings,
+Circuit edges,
+Dos-à-dos bindings,
+Flap bindings,
+Girdle books,
+Guard books,
+Limp bindings,
+Mechanical bindings,
+Comb bindings,
+Spiral bindings,
+Non-adhesive bindings,
+Tacketed bindings,
+Tucks,
+Wrappers,
+Cloth wrappers,
+Printed wrappers,
+Vellum wrappers,
+Yapp style bindings</p>
+    </div>
+    <div id="taxonomy" class="step" data-x="3600" data-y="1200" data-rotate-y="90" data-z="-1200">
+        <a href="http://www.w3.org/TR/skos-primer/"><img src="http://www.w3.org/TR/skos-primer/broaderNonTransitive.jpg"></a>
+        <p>Wrappers is <strong>broader than</strong> Vellum Wrappers</p>
+    </div>
+    <div id="ontology" class="step" data-x="3600" data-y="1200" data-rotate-y="90" data-z="-2400">
+        <div class="notes">
+            This thing is an instance of a Cloth Wrapper, which is made of cotton and is blue in colour
+        </div>
+    </div>
+    <div id="voctaxont" class="step" data-x="4800" data-y="1200">
+        <ul>
+            <li>Vocabulary: Set of Terms</li>
+            <li>Taxonomy: Terms &amp; Concepts &amp; Relationships</li>
+            <li>Ontology: Concept, Terms, Relationships &amp; Data</li>
+        </ul>
+    </div>
+    <div id="RDF" class="step" data-x="-1200" data-y="2400">
+        <div id="RDFGraph"></div>
+    </div>
+    <div id="triple" class="step" data-x="0" data-y="2400">
+    </div>
+    <div id="schemasandOwl" class="step" data-x="1200" data-y="2400">
+    </div>
+    <!-- Part 2 -->
+    <div id="consumingandenriching" class="step" data-x="-1200" data-y="3600">
+        have a notion of semantics, but how do we actually use that to improve what we have?
+    </div>
+    <div id="LOD" class="step" data-x="0" data-y="3600">
+        <!-- cloud here-->
+    </div>
+    <div id="gatheringData" class="step" data-x="1200" data-y="4800">
+        We can leverage the open ness of the LOD web to get our hands on concepts, on data, on terms, and link it all together to get a network effect
+    </div>
+    <div id="sparql" class="step" data-x="2400" data-y="4800">
+        <!-- 3 or four example queries here -->
+        <!-- as a question -->
+        <!-- refer to another description of a thing -->
+        <!-- extend our facts and disambiguate -->
+    </div>
+    <div id="enrichingContent" data-x="-1200" data-y="6000">
+        What to enrich and how?
+        add metadata, add context, add facts, resolve ambiguities, mark linguistic factors, licensing, etc etc?
+    </div>
+    <div id="enrichingAPoster" data-x="0" data-y="7200">
+        <div><a href="http://digitalcollections.tcd.ie/home/index.php?DRIS_ID=PapyrusCase55_041"><img src="img/oleary.png" /></a>
+    </div>
+    <div id="posterGraph" class="step" data-x="0" data-y="7200" data-rotate-y="90" data-z="-1200">
+        <table border="1">
+            <tr><td rowspan="13">PapyrusCase55_041</td> <td>Title:</td> <td>An Irish hero! 1 Irishman defeats 10 Germans</td></tr>
+            <tr><td>Name(s):</td><td>Great Britain. Army.</td></tr>
+            <tr><td>Department:</td><td> Early Printed Books, Trinity College Library, Dublin</td></tr>
+            <tr><td>Item No.: </td><td>EPB Papyrus Case 55b</td></tr>
+            <tr><td>Collection title:</td><td> World War I Recruiting Posters</td></tr>
+            <tr><td>Is part of:</td><td> World War I Recruiting Collection</td></tr>
+            <tr><td>Digital No.:</td><td> PapyrusCase55_041</td></tr>
+            <tr><td>Abstract:</td><td> World War I Recruiting Collection: These posters and leaflets were issued by the British Army in Dublin during the war.</td></tr>
+            <tr><td>Type of work:</td><td> posters</td></tr>
+            <tr><td>Dimensions:</td><td> 78 x 53 cm</td></tr>
+            <tr><td>Material:</td><td> paper (fiber product) <br />colored ink</td></tr>
+            <tr><td>Subjects:</td><td>
+            <ul>
+                <li>Patriotism</li>
+                <li>World War, 1914-1918--Great Britain--Posters</li>
+                <li>Recruiting and enlistment</li>
+                <li>World War, 1914-1918--Ireland</li>
+                <li>World War, 1914-1918--Campaigns--Germany</li>
+            </ul>
+            </td></tr>
+            <tr><td>Publisher:</td><td> James Walker</td></tr>
+            <tr><td>Copyright:</td><td> Copyright 2012 The Board of Trinity College Dublin. Images are available for single-use academic application only. Publication, transmission or display is prohibited without formal written approval of Trinity College Library, Dublin.</td></tr>
+        </table>
+    </div>
+    <div id="oLearyGraph" class="step" data-y="7200" data-x="0" data-rotate-y="90" data-z="-2400">
+        <img src="img/olearyGraph.png" />
+    </div>
+    <div id="RDFa">
+        <!-- RDFa Example -->
+    </div>
+    <!-- Part 3 -->
+    <div id="publishing">
+
+    </div>
+    <div id="whatToPublish">
+        <div class="notes">
+            Facts, Data, metadata.
+        </div>
+    </div>
+    <div id="void">
+        Void and LOV
+    </div>
+    <div id="endpoint">
+        <div class="notes">
+            Describe the dataset
+            Interlinking statements
+            map from your data to your semantics (eg from database, writing rdf, etc)
+            REUSE, Interlink
+        </div>
+    </div>
+
+    <!-- Conclusions -->
+    <div id="openness">
+        <div class="notes">
+            the  key feature of openness
+        </div>
+    </div>
+    <div id="resources" class="step" data-scale="0.10">
+        <div>
+            <ul><li><a href="http://www.w3.org/TR/rdf11-primer/">http://www.w3.org/TR/rdf11-primer/</a></li></ul>
+            <ul><li><a href=""></a></li></ul>
+            <ul><li><a href=""></a></li></ul>
+            <ul><li><a href=""></a></li></ul>
+            <ul><li><a href=""></a></li></ul>
+            <ul><li><a href=""></a></li></ul>
+            <ul><li><a href=""></a></li></ul>
+                    </div>
+    </div>
+
+    <!-- keep an overview slide -->
+    <div id="overview" class="step" data-x="0" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="10">
+    </div>
+
+</div>
+<!-- end of impress -->
+
+<!-- a bar at the top with a timer. You could put other text or info in here by adding more spans -->
+<div id="navbar"><div id="timebar">&nbsp;</div><p> <span id="timer">Click to Start Timer.</span></p><p><input id="notebox" type="checkbox" /><label for="notebox">show notes</label></p></div>
+
+<!-- a little menu based on the slides -->
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+
+<div id="menubutton" tabindex="1">
+    <i class="fa fa-bars fa-lg"></i>
+</div>
+
+<div id="navmenu">
+    <ul></ul>
+</div>
+
+
+
+<script>
+if ("ontouchstart" in document.documentElement) {
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+<!-- LESS CSS -->
+<script src="js/less.min.js"></script>
+<!-- D3 JS -->
+<script src="js/d3.v3.min.js" charset="utf-8"></script>
+<!-- Load the presentation tool -->
+<script src="js/impress.js"></script>
+<!-- Load the timer -->
+<script src="js/timer.js"></script>
+<!-- Menu -->
+<script src="js/navmenu.js"></script>
+
+<!-- Load the D3 graphs -->
+<script src="js/diagrams.js"></script>
+
+<!-- Initialisation -->
+<script>impress().init();</script>
+
+</body>
+</html>

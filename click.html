@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+
+<style>
+
+#navbut{
+    position: fixed;
+    left: 0px;
+    top: 50px;
+}
+
+#menu{
+    position: fixed;
+    left: -100px;
+    top: 0px;
+}
+
+#navbut:focus ~ #menu {
+    left: 0px;
+    background: #000;
+}
+</style>
+
+</head>
+<body>
+
+    <div id="navbut" tabindex="0">
+        <p>Click!</p>
+    </div>
+    <div id="menu">
+        <ul>
+            <li>test</li>
+            <li>test</li>
+            <li>test</li>
+        </ul>    
+    </div>
+
+</body>
+</html>

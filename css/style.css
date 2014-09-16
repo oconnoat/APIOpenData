@@ -1,0 +1,34 @@
+/* Custom CSS File for the impress presentation */
+/* To add Google Fonts, one option is to use @import(url('')); if you do, it must go before all other declarations except @charset
+ * another option is to create a font source block. This will allow you to have a local fallback. It also allows Truetype fallbacks an so on.
+ *
+ *
+ *
+ * An example block below 
+ * @font-face {
+ * font-family: 'Satisfy';
+ *  font-style: normal;
+ *  font-weight: 400;
+ *  src: local('Satisfy') url(http://themes.googleusercontent.com/static/fonts/satisfy/v4/tmRzDlQs5wZmOn9mIuLa-QLUuEpTyoUstqEm5AMlJo4.woff) format('woff'),
+ *  local('Satisfy') url('Satisfy.woff') format('woff'); 
+ * }
+ *
+ *
+ * */
+
+
+/* Tag Markup */
+.step{
+    width: 90vw;
+    height: 100vh;
+}
+/* Impress-related markup */
+
+/* make the non-active steps transparent */
+.step:not(.active) { opacity: 0.33; }
+
+/* Per-slide Markup uses .impress-on-slideID */
+
+
+/* specific divs */
+
