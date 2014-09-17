@@ -19,10 +19,14 @@
 
 /* Tag Markup */
 .step{
-    width: 90vw;
-    height: 100vh;
+    display: block;
+    width: 80vw;
+    height: 90vh;
 }
 /* Impress-related markup */
+.impress-enabled .step.active {
+    background-color: #fff;:
+}
 
 /* make the non-active steps transparent */
 .step:not(.active) { opacity: 0.33; }
