@@ -1,5 +1,4 @@
 var navList = document.querySelector("#navmenu ul");
-
 var slides = document.querySelectorAll(".step");
 
 console.log(slides);
@@ -15,14 +14,9 @@ for (var i=0; i < slides.length; i++){
 
 var notebox = document.querySelector("#notebox");
 notebox.addEventListener('change', function(){
-    console.log(document.querySelector('.notes').style);
-    if (this.checked){
-        
-        document.querySelector('.notes').style.display = "block";
-    }
-    else {
-        document.querySelector('.notes').style.display = "none";
-
-    }
+    notes =  document.querySelectorAll('.notes');
+    for(var i = 0; i < notes.length; i++){
+        notes[i].style.display = this.checked ? 'block' : 'none';
+    }    
 });
 

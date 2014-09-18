@@ -43,9 +43,14 @@ Released under the MIT and GPL (version 2 or later) Licenses.
 <div id="impress">
 
     <div id="title" class="step" data-x="0" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
-        <h1>Linked Data &amp; the Semantic Web&mdash;Making Human Knowledge Programmable</h1>
-        <h2>Alexander O&apos;Connor, CNGL Centre for Global Intelligent Content, KDEG, School of Computer Science &amp; Statistics, Trinity College Dublin, Ireland.</h2>
-        <h3><i class="fa fa-twitter"></i>@uberalex / <a href="http://www.oconnoat.com/">http://www.oconnoat.com</a></h3>
+        <h1>Linked Data &amp; the Semantic Web&mdash;Making Human Knowledge <span class="mono">Programmable</span></h1>
+        
+        <h2>Alexander O&apos;Connor,<br />
+        <a href="http://www.cngl.ie">CNGL</a> Centre for Global Intelligent Content,<br /> 
+        <a href="http://kdeg.scss.tcd.ie">KDEG</a>, School of Computer Science &amp; Statistics,<br />
+        Trinity College Dublin, Ireland.</h2>
+        <h3><i class="fa fa-twitter"></i>
+            <a href="http://www.twitter.com/uberalex">@uberalex</a></h3>
     </div>
     <div id="talkAnatomy" class="step" data-x="1200" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
         <ul>
@@ -62,11 +67,8 @@ Released under the MIT and GPL (version 2 or later) Licenses.
     </div>
 <!-- PART 1 -->
     <div id="lodwww" class="step" data-x="-1200" data-y="1200">
-        <div id="lodwwwcontent">
-            <img src="robots" />
-        </div>
         <div class="notes">
-            <p>The real objective of the Linked Data Web is to make a web that is more understandable for computers. Humans communicate in text, big blocks of the stuff, that is very hard to process automatically. We use all sorts of complex linguistic tricks: metaphor, references; we often speak indirectly about things, and it all depends on the fact that we can communicate using a shared context. The goal of structuring linked data is exactly that: how do we establish a common reference model to allow computers to 'read' documents.</p>
+            The real objective of the Linked Data Web is to make a web that is more understandable for computers. Humans communicate in text, big blocks of the stuff, that is very hard to process automatically. We use all sorts of complex linguistic tricks: metaphor, references; we often speak indirectly about things, and it all depends on the fact that we can communicate using a shared context. The goal of structuring linked data is exactly that: how do we establish a common reference model to allow computers to 'read' documents.
         </div>
 
     </div>
@@ -81,7 +83,7 @@ Released under the MIT and GPL (version 2 or later) Licenses.
 
     <div id="meaningtriangle" class="step" data-x="1200" data-y="1200">
 
-        <a href="http://www.jfsowa.com/ontology/ontometa.htm"><img src="http://www.jfsowa.com/figs/yojo.gif" /><span class="caption">>Sowa, J.F. <em>Ontology, Metadata, and Semiotics</span></a>
+        <a href="http://www.jfsowa.com/ontology/ontometa.htm"><img src="http://www.jfsowa.com/figs/yojo.gif" /><span class="caption"><br />Sowa, J.F. <em>Ontology, Metadata, and Semiotics</em></span></a>
         <div class="notes">
             <p>When humans read a piece of text, what they are doing is looking at labels which they translate into concepts. We have the concept of the Triangle of reference. There's a thing, we have a conceptualisation of that thing, and we communicate that with a symbol. There's lots of complexity there in reconciling the three.</p>
         </div>
@@ -138,6 +140,7 @@ Yapp style bindings</p>
         <div id="RDFGraph"></div>
     </div>
     <div id="triple" class="step" data-x="0" data-y="2400">
+        <div id="TripleGraph"></div>
     </div>
     <div id="schemasandOwl" class="step" data-x="1200" data-y="2400">
     </div>
@@ -147,9 +150,12 @@ Yapp style bindings</p>
     </div>
     <div id="LOD" class="step" data-x="0" data-y="3600">
         <!-- cloud here-->
+        <img src="img/LODCloud.svg" />
+        <a href="http://data.dws.informatik.uni-mannheim.de/lodcloud/2014/">http://data.dws.informatik.uni-mannheim.de/lodcloud/2014/</a>
+
     </div>
     <div id="gatheringData" class="step" data-x="1200" data-y="4800">
-        We can leverage the open ness of the LOD web to get our hands on concepts, on data, on terms, and link it all together to get a network effect
+        <div class="notes">We can leverage the open ness of the LOD web to get our hands on concepts, on data, on terms, and link it all together to get a network effect.</div>
     </div>
     <div id="sparql" class="step" data-x="2400" data-y="4800">
         <!-- 3 or four example queries here -->
@@ -159,7 +165,7 @@ Yapp style bindings</p>
         dbpedia.org/snorql
     </div>
     <div id="enrichingContent" class="step" data-x="-1200" data-y="6000">
-        What to enrich and how?
+        <h1>What to enrich and how?</h1>
         add metadata, add context, add facts, resolve ambiguities, mark linguistic factors, licensing, etc etc?
     </div>
     <div id="enrichingAPoster" class="step" data-x="0" data-y="6000">
@@ -167,14 +173,14 @@ Yapp style bindings</p>
     </div>
     <div id="posterGraph" class="step" data-x="0" data-y="6000" data-rotate-y="90" data-z="-1200">
         <table border="1">
-            <tr><td rowspan="13">PapyrusCase55_041</td> <td>Title:</td> <td>An Irish hero! 1 Irishman defeats 10 Germans</td></tr>
+            <tr><td rowspan="14"><strong>PapyrusCase55_041</strong></td> <td>Title:</td> <td>An Irish hero! 1 Irishman defeats 10 Germans</td></tr>
             <tr><td>Name(s):</td><td>Great Britain. Army.</td></tr>
             <tr><td>Department:</td><td> Early Printed Books, Trinity College Library, Dublin</td></tr>
             <tr><td>Item No.: </td><td>EPB Papyrus Case 55b</td></tr>
             <tr><td>Collection title:</td><td> World War I Recruiting Posters</td></tr>
             <tr><td>Is part of:</td><td> World War I Recruiting Collection</td></tr>
             <tr><td>Digital No.:</td><td> PapyrusCase55_041</td></tr>
-            <tr><td>Abstract:</td><td> World War I Recruiting Collection: These posters and leaflets were issued by the British Army in Dublin during the war.</td></tr>
+            <tr><td>Abstract:</td><td> World War I Recruiting Collection: <br />These posters and leaflets were issued by the British Army in Dublin during the war.</td></tr>
             <tr><td>Type of work:</td><td> posters</td></tr>
             <tr><td>Dimensions:</td><td> 78 x 53 cm</td></tr>
             <tr><td>Material:</td><td> paper (fiber product) <br />colored ink</td></tr>
@@ -188,14 +194,19 @@ Yapp style bindings</p>
             </ul>
             </td></tr>
             <tr><td>Publisher:</td><td> James Walker</td></tr>
-            <tr><td>Copyright:</td><td> Copyright 2012 The Board of Trinity College Dublin. Images are available for single-use academic application only. Publication, transmission or display is prohibited without formal written approval of Trinity College Library, Dublin.</td></tr>
+            <tr><td>Copyright:</td><td> Copyright 2012 The Board of Trinity College Dublin.</td></tr>
         </table>
     </div>
-    <div id="oLearyGraph" class="step" data-y="6000" data-x="0" data-rotate-y="90" data-z="-2400">
-        <img src="img/olearygraph.png" />
+    <div id="OLearyGraph" class="step" data-y="6000" data-x="0" data-rotate-y="90" data-z="-2400">
+        <img src="img/olearygraph.png" height="500" />
+        <div class="notes">
+            One thing here is that if we collect the data from the  poster, he's a Sergeant. In Wikipedia, he's a Major. In the Citation, he was a Lance-Corporal. 
+        </div>
     </div>
     <div id="RDFa" class="step" data-y="6000" data-x="0" data-rotate-y="90" data-z="-3600">
-        <!-- RDFa Example -->
+        <p>
+        Major Michael John O'Leary VC (29 September 1890 – 2 August 1961) was an Irish recipient of the Victoria Cross, the most prestigious award for gallantry in the face of the enemy that can be awarded to British and Commonwealth forces. O'Leary achieved his award for single-handedly charging and destroying two German barricades defended by machine gun positions near the French village of Cuinchy, in a localised operation on the Western Front during the First World War.</p>
+        <p class="caption"> <a href="http://en.wikipedia.org/wiki/Michael_John_O%27Leary">http://en.wikipedia.org/wiki/Michael_John_O%27Leary</a></p>
     </div>
     <!-- Part 3 -->
     <div id="publishing" class="step" data-y="7200" data-x="-1200">
@@ -220,14 +231,26 @@ Yapp style bindings</p>
 
     <!-- Conclusions -->
     <div id="openness" class="step" data-y="9600" data-x="0">
+        <img src="img/borrowcup.png" />
+        <div id="nonfunc">
+            <ul>
+                <li>Five-star Data</li>
+                <li>Endpoint Availability</li>
+                <li>Documentation</li>
+                <li>Provenance</li>
+                <li>Licensing</li>
+            </ul>
+        </div>
         <div class="notes">
-            the  key feature of openness
+           Openness is the key requirement for this, but it's not enough just to push content out of the nest. 
+           Open Data has to be structured in an accessible way (right metadata, right format and written in best practice)
+           It also has to be sustained: that means using what's already out there, and being aware that you need to maintain it. 
         </div>
     </div>
     <div id="resources" class="step" data-x="1200" data-y="9600">
         <div>
             <ul><li><a href="http://www.w3.org/TR/rdf11-primer/">http://www.w3.org/TR/rdf11-primer/</a></li></ul>
-            <ul><li><a href=""></a></li></ul>
+            <ul><li><a href="http://lov.okfn.org/dataset/lov/search/">http://lov.okfn.org/dataset/lov/search/</a></li></ul>
             <ul><li><a href=""></a></li></ul>
             <ul><li><a href=""></a></li></ul>
             <ul><li><a href=""></a></li></ul>

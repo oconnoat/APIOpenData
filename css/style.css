@@ -32,7 +32,68 @@
 .step:not(.active) { opacity: 0.33; }
 
 /* Per-slide Markup uses .impress-on-slideID */
+.impress-on-talkAnatomy{
+    /*remember that this is in the css directory */
+    background-image: url('../img/flickrsaltonlinetools.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-height: 100%;
+    background-width: 100%;
 
-
+}
 /* specific divs */
+#title h1{
+    font-size: 48px;
+    font-family: cursive;
+    text-align: center;
+}
+#title h2{
+    font-size:36px;
+    font-family: sans-serif;
+}
+#vocabulary p{
+    width: 75%;
+    font-size: 36px;
+}
 
+#lodwww {
+    background-image: url('../img/robots.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-height: 100%;
+    background-width: 100%;
+
+}
+#enrichingAPoster {
+    background-color: #ccc;
+}
+#enrichingAPoster img {
+    height: 90vh;
+    position: absolute;
+    left: 30%;
+}
+#olearyGraph img{
+    max-height: 90vh;
+}
+#posterGraph{
+    font-size: 18px;
+}
+#openness img {
+    height: 100%;
+}
+#openness div {
+    width: 40%;
+    float: right;
+}
+
+span.mono {
+    font-family: monospace;
+}
+
+.caption {
+    font-style: bold;
+    font-size: 10px;
+    text-align: right;
+}

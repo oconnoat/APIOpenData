@@ -55,15 +55,12 @@
 }
 
 div.notes {
+    background-color: #c0c;
     display: none;
+    font-size: 18px;
+    position: absolute;
+    margin: auto;
+    bottom: 10%;
+
 }
 
-#notebox:checked ~ div.notes{
-    color: green;
-    display: block;
-    position: static;
-    font-size: 16px;
-    float: right;
-    border: 1px solid black;
-    background-color: rgba(255, 239, 0, 0.5);
-}

@@ -1,6 +1,6 @@
 /* a Very simple javascript function to add a timer that counts down */
 
-var time = 1000 * 60 * 0.5 //change the last number for the number of minutes (to msec)
+var time = 1000 * 60 * 45 //change the last number for the number of minutes (to msec)
 
 //http://stackoverflow.com/questions/1191865/code-for-a-simple-javascript-countdown-timer
 function timer(time,update) {
