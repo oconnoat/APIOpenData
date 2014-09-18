@@ -53,11 +53,11 @@ Released under the MIT and GPL (version 2 or later) Licenses.
             <a href="http://www.twitter.com/uberalex">@uberalex</a></h3>
     </div>
     <div id="talkAnatomy" class="step" data-x="1200" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
-        <ul>
+        <ol>
             <li>Markup</li>
             <li>Querying &amp; Exploring</li>
             <li>Hosting</li>
-        </ul>
+        </ol>
 
         <div class="notes">
             <p>45 minutes is actually not a long time to discuss the semantic web. What I'm going to try and focus on is the practical aspects in three areas:</p>
@@ -73,11 +73,11 @@ Released under the MIT and GPL (version 2 or later) Licenses.
 
     </div>
     <div id="FerdinandFoch" class="step" data-x="0" data-y="1200">
-        <img src="foch" />
-        <q>"My centre is giving way, my right is in retreat, situation excellent. I attack." ― Ferdinand Foch </q>
+        <p><q>"My centre is giving way, my right is in retreat, situation excellent. I attack." ― Ferdinand Foch </q></p>
            <div class="notes">
                <p>Taking Marechal Foch's sentence as an example, what might we want to do to provide context?</p>
             <ul><li>Battle of the Marne &amp; military terms</li><li>Irony</li><li>Who is Foch?</li><li>quote</li><li>translation</li></ul>
+            <a href="http://www.europeana1914-1918.eu/en/europeana/record/9200310/BibliographicResource_3000093748366_source">Background image reference</a>
             </div>
     </div>
 
@@ -122,7 +122,7 @@ Yapp style bindings</p>
     </div>
     <div id="taxonomy" class="step" data-x="3600" data-y="1200" data-rotate-y="90" data-z="-1200">
         <a href="http://www.w3.org/TR/skos-primer/"><img src="http://www.w3.org/TR/skos-primer/broaderNonTransitive.jpg"></a>
-        <p>Wrappers is <strong>broader than</strong> Vellum Wrappers</p>
+        <p>Wrappers <br /> <strong>broader than</strong> <br /> Vellum Wrappers</p>
     </div>
     <div id="ontology" class="step" data-x="3600" data-y="1200" data-rotate-y="90" data-z="-2400">
         <img src="img/kellsonto.png" />
@@ -131,10 +131,11 @@ Yapp style bindings</p>
         </div>
     </div>
     <div id="voctaxont" class="step" data-x="4800" data-y="1200">
+        <h1>Common Understanding</h1>
         <ul>
-            <li><i class="fa fa-bars"></i> Vocabulary: Set of Terms</li>
-            <li><i class="fa fa-sort-amount-asc"></i> Taxonomy: Terms &amp; Concepts &amp; Relationships</li>
-            <li><i class="fa fa-sitemap"></i> Ontology: Terms &amp; Concepts &amp; Relationships &amp; Data</li>
+            <li><i class="fa fa-bars fa-lg"></i> Vocabulary: <br />Set of Terms</li>
+            <li><i class="fa fa-sort-amount-asc fa-lg"></i> Taxonomy: <br />Terms &amp; Concepts &amp; Relationships</li>
+            <li><i class="fa fa-sitemap fa-lg"></i> Ontology: <br />Terms &amp; Concepts &amp; Relationships &amp; Data</li>
         </ul>
     </div>
     <div id="RDF" class="step" data-x="-1200" data-y="2400">
@@ -147,11 +148,12 @@ Yapp style bindings</p>
     </div>
     <!-- Part 2 -->
     <div id="consumingandenriching" class="step" data-x="-1200" data-y="3600">
-        have a notion of semantics, but how do we actually use that to improve what we have?
+
+        <div class="notes">have a notion of semantics, but how do we actually use that to improve what we have?</div>
     </div>
     <div id="LOD" class="step" data-x="0" data-y="3600">
         <!-- cloud here-->
-        <a href="http://data.dws.informatik.uni-mannheim.de/lodcloud/2014/"><img src="img/LODCloud.svg" /><br />
+        <a href="http://data.dws.informatik.uni-mannheim.de/lodcloud/2014/">
             <span class="caption">http://data.dws.informatik.uni-mannheim.de/lodcloud/2014/</span></a>
 
     </div>
@@ -166,11 +168,11 @@ Yapp style bindings</p>
         dbpedia.org/snorql
     </div>
     <div id="enrichingContent" class="step" data-x="-1200" data-y="6000">
-        <h1>What to enrich and how?</h1>
-        add metadata, add context, add facts, resolve ambiguities, mark linguistic factors, licensing, etc etc?
+        <div class="notes"><h1>What to enrich and how?</h1>
+            add metadata, add context, add facts, resolve ambiguities, mark linguistic factors, licensing, etc etc?</div>
     </div>
     <div id="enrichingAPoster" class="step" data-x="0" data-y="6000">
-        <a href="http://digitalcollections.tcd.ie/home/index.php?DRIS_ID=PapyrusCase55_041"><img src="img/oleary.jpg" /></a>
+        <div><a href="http://digitalcollections.tcd.ie/home/index.php?DRIS_ID=PapyrusCase55_041"><img src="img/oleary.jpg" /></a></div>
     </div>
     <div id="posterGraph" class="step" data-x="0" data-y="6000" data-rotate-y="90" data-z="-1200">
         <table border="1">
@@ -204,6 +206,21 @@ Yapp style bindings</p>
             One thing here is that if we collect the data from the  poster, he's a Sergeant. In Wikipedia, he's a Major. In the Citation, he was a Lance-Corporal. 
         </div>
     </div>
+        <div id="OLearyGraphTurtle" class="step" data-x="-2000" data-y="6000" data-z="-2400" data-rotate-y="90">
+        <p>
+        @prefix dbpedia: http://dbpedia.org/resource<br /> 
+           @prefix ex: http://www.example.com/<br />
+           <br />
+           ex:Michael_John_O'Leary is a dbpedia:Military_Person.<br /> 
+           ex:Michael_John_O'Leary ex:hasAward ex:VC3556.<br /> 
+           ex:Michael_John_O'Leary ex:hasRank ex:Sargeant.<br />
+           ex:Michael_John_O'Leary foaf:name "Michael John O'Leary".<br />
+           ex:Michael_John_O'Leary OWL:sameas dbpedia:Michael_John_O'Leary.<br /> 
+           ex:VC3556 ex:hasDate "1915-02-16^^XSD:Date". 
+        </p>
+        <div class="notes">Note, I have not validated this and it's untested, so beware.</div>
+    </div>
+
        <div id="RDFa" class="step" data-y="6000" data-x="0" data-rotate-y="90" data-z="-3600">
         <p vocab="http://schema.org/" typeof="Person">
         <span property="honorificPrefix">Major</span>
@@ -216,7 +233,7 @@ Yapp style bindings</p>
         <a href="http://en.wikipedia.org/wiki/Michael_John_O%27Leary">http://en.wikipedia.org/wiki/Michael_John_O%27Leary</a>
         </span></p>
     </div>
-    <div id="RDFaRevealed" class="step" data-y="6000" data-x="0" data-rotate-y="90" data-rotate-x="90" data-z="-4800">
+    <div id="RDFaRevealed" class="step" data-y="4800" data-x="-2000" data-rotate-y="90" data-z="-4800">
         <p>
         &lt;p vocab="http://schema.org/" typeof="Person"&gt;<br />
         &nbsp;&nbsp;&lt;span property="honorificPrefix"&gt;Major&lt;/span&gt;<br />
@@ -239,15 +256,26 @@ Yapp style bindings</p>
     </div>
     <!-- Part 3 -->
     <div id="publishing" class="step" data-y="7200" data-x="-1200">
-
+        <img src="img/LDMug.jpg"/>
+        <h1>Just get it online, whatever <em>it</em> is</h1>
     </div>
     <div id="whatToPublish" class="step" data-y="7200" data-x="0">
+        <h1>What data do we have?</h1>
+        <ul>
+            <li>CSV <i class="fa fa-database fa-lg"></i></li>
+            <li>PDF <i class="fa fa-exclamation-triangle fa-lg"></i></li>
+            <li>JPG <i class="fa fa-camera-retro fa-lg"></i></li>
+            <li>XML <i class="fa fa-file-code-o fa-lg"></i></li>
+            <li>TXT <i class="fa fa-file-text-o fa-lg"></i></li>
+        </ul>
+
         <div class="notes">
             Facts, Data, metadata.
         </div>
     </div>
     <div id="void" class="step" data-y="7200" data-x="1200">
-        Void and LOV
+        <a href="http://lov.okfn.org/dataset/lov/"><img src="img/lov.png" /></a>
+        <div class="notes">Void and LOV provide a way of making sure that you leverage the best concepts from vocabularies, and that you can document your schema to help users get the value.</div>
     </div>
     <div id="endpoint" class="step" data-y="7200" data-x="2400">
         <div class="notes">
@@ -278,18 +306,18 @@ Yapp style bindings</p>
     </div>
     <div id="resources" class="step" data-x="1200" data-y="9600">
         <div>
-            <ul><li><a href="http://www.w3.org/TR/rdf11-primer/">http://www.w3.org/TR/rdf11-primer/</a></li></ul>
+            <ul><li><a href="http://www.w3.org/TR/rdf11-primer/">http://www.w3.org/TR/rdf11-primer/</a></li>
             <li><a href="http://lov.okfn.org/dataset/lov/search/">http://lov.okfn.org/dataset/lov/search/</a></li>
             <li><a href="http://rdfa.info/">http://rdfa.info/</a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li></ul>
+            <li><a href="http://www.w3.org/TR/skos-primer/">http://www.w3.org/TR/skos-primer/</a></li>
+            <li><a href="http://5stardata.info/">http://5stardata.info/</a></li>
+            <li><a href="http://pro.europeana.eu/edm-documentation">http://pro.europeana.eu/edm-documentation</a></li>
+            <li><a href="http://www.cidoc-crm.org/">http://www.cidoc-crm.org/</a></li></ul>
                     </div>
     </div>
 
     <!-- keep an overview slide -->
-    <div id="overview" class="step" data-x="0" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="10">
+    <div id="overview" class="step" data-x="2400" data-y="1200" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="10">
     </div>
 
 </div>

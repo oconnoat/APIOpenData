@@ -42,6 +42,17 @@
     background-width: 100%;
 
 }
+.impress-on-OLearyGraphTurtle{
+    /*remember that this is in the css directory */
+    background-image: url('../img/turtles.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-height: 100%;
+    background-width: 100%;
+
+}
+
 /* specific divs */
 #title h1{
     font-size: 48px;
@@ -51,14 +62,111 @@
 #title h2{
     font-size:36px;
     font-family: sans-serif;
+} 
+#talkAnatomy {
+    background: none;
+}
+#talkAnatomy ol{
+    list-style-type: lower-roman;
+    list-style-position: inside;
+}
+#talkAnatomy li{
+    background-color: #3BAFDA;
+    margin-top: 10%;
+}
+#meaningtriangle img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -218px;
+    margin-left: -270px;
+}
+#meaningtriangle span{
+    position: absolute;
+    top: 0;
 }
 #vocabulary p{
     width: 75%;
-    font-size: 36px;
+    font-size: 28px;
+}
+#voctaxont h1 {
+    color: #fff;
+}
+#voctaxont ul {
+    position: absolute;
+    left: 10%;
+    width: 80%;
+    top: 20%;
 }
 #voctaxont li {
     margin-bottom: 3%;
-    font-size: 24px;
+    background-color: #FFCE54;
+    font-size: 36px;
+    padding-left: 1%;
+}
+#taxonomy p{
+    position: absolute;
+    text-align: center;
+    font-family: monospace;
+    bottom: 10%;
+    left: 30%;
+}
+
+#taxonomy img{
+    position: absolute;
+    left: 50%;
+    margin-left: -294px;
+}
+#gatheringData{
+    background-image: url('../img/consumebustart.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-height: 100%;
+    background-width: 100%;
+}
+
+#voctaxont {
+    background-image: url('../img/jaymantriTriangles.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-height: 100%;
+    background-width: 100%;
+}
+
+#FerdinandFoch {
+    background-image: url('../img/fochcard.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-height: 100%;
+    background-width: 100%;
+}
+
+#FerdinandFoch p{
+    position: absolute;
+    bottom: 5%;
+    background-color: rgba(200,200,200,0.5);
+    text-align: center;
+}
+
+#consumingandenriching{
+    background-image: url('../img/alicjacolonfingersnap.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-height: 100%;
+    background-width: 100%;
+}
+#LOD {
+    background-image: url('../img/LODCloud.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#LOD span{
+    position: absolute;
+    top: 0;
 }
 #lodwww {
     background-image: url('../img/robots.jpg');
@@ -67,18 +175,27 @@
     background-size: cover;
     background-height: 100%;
     background-width: 100%;
-
 }
 #enrichingAPoster {
-    background-color: rgb(72,72,72);
+    background-color: rgb(74,74,74);
 }
 #enrichingAPoster img {
-    height: 90vh;
+    height: 90%;
     position: absolute;
     left: 30%;
 }
-#olearyGraph img{
+#OLearyGraph img{
+    position: absolute;
     height: 90%;
+    right: 10%;
+}
+#OLearyGraphTurtle{
+    background-color: rgba(255,255,255,0.66);
+}
+
+#OLearyGraphTurtle p{
+    font-size: 24px;
+    font-family: monospace;
 }
 #posterGraph{
     font-size: 18px;
@@ -93,11 +210,50 @@
     width: 40%;
     float: right;
 }
-
+#publishing h1{
+    float: right;
+}
+#whatToPublish ul{
+    position: absolute;
+    left: 35%;
+    top: 25%;
+}
+#whatToPublish ul{
+    text-align: right;
+}
+#openness ul {
+    list-style-type: circle;
+}
+#void img {
+height:600px;
+position: absolute;
+left: 50%;
+margin-left: -300px;
+}
 #RDFa {
     font-size: 24px;
 }
 
+#endpoint{
+    /*remember that this is in the css directory */
+    background-image: url('../img/jaymantridonotenter.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-height: 100%;
+    background-width: 100%;
+
+}
+#enrichingContent{
+    /*remember that this is in the css directory */
+    background-image: url('../img/cashcoins.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-height: 100%;
+    background-width: 100%;
+
+}
 #RDFaRevealed p {
     font-size: 18px;
     font-family: monospace;
