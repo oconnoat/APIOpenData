@@ -125,15 +125,16 @@ Yapp style bindings</p>
         <p>Wrappers is <strong>broader than</strong> Vellum Wrappers</p>
     </div>
     <div id="ontology" class="step" data-x="3600" data-y="1200" data-rotate-y="90" data-z="-2400">
+        <img src="img/kellsonto.png" />
         <div class="notes">
-            This thing is an instance of a Cloth Wrapper, which is made of cotton and is blue in colour
+            Instances (or Individuals) are members of classes, with properties, and classes can have superclasses.
         </div>
     </div>
     <div id="voctaxont" class="step" data-x="4800" data-y="1200">
         <ul>
-            <li>Vocabulary: Set of Terms</li>
-            <li>Taxonomy: Terms &amp; Concepts &amp; Relationships</li>
-            <li>Ontology: Concept, Terms, Relationships &amp; Data</li>
+            <li><i class="fa fa-bars"></i> Vocabulary: Set of Terms</li>
+            <li><i class="fa fa-sort-amount-asc"></i> Taxonomy: Terms &amp; Concepts &amp; Relationships</li>
+            <li><i class="fa fa-sitemap"></i> Ontology: Terms &amp; Concepts &amp; Relationships &amp; Data</li>
         </ul>
     </div>
     <div id="RDF" class="step" data-x="-1200" data-y="2400">
@@ -150,8 +151,8 @@ Yapp style bindings</p>
     </div>
     <div id="LOD" class="step" data-x="0" data-y="3600">
         <!-- cloud here-->
-        <img src="img/LODCloud.svg" />
-        <a href="http://data.dws.informatik.uni-mannheim.de/lodcloud/2014/">http://data.dws.informatik.uni-mannheim.de/lodcloud/2014/</a>
+        <a href="http://data.dws.informatik.uni-mannheim.de/lodcloud/2014/"><img src="img/LODCloud.svg" /><br />
+            <span class="caption">http://data.dws.informatik.uni-mannheim.de/lodcloud/2014/</span></a>
 
     </div>
     <div id="gatheringData" class="step" data-x="1200" data-y="4800">
@@ -203,10 +204,38 @@ Yapp style bindings</p>
             One thing here is that if we collect the data from the  poster, he's a Sergeant. In Wikipedia, he's a Major. In the Citation, he was a Lance-Corporal. 
         </div>
     </div>
-    <div id="RDFa" class="step" data-y="6000" data-x="0" data-rotate-y="90" data-z="-3600">
+       <div id="RDFa" class="step" data-y="6000" data-x="0" data-rotate-y="90" data-z="-3600">
+        <p vocab="http://schema.org/" typeof="Person">
+        <span property="honorificPrefix">Major</span>
+        <span property="name">Michael John O'Leary</span>
+        <span property="award">VC</span> 
+        (<span property="birthdate">29 September 1890</span> – <span property="deathdate">2 August 1961</span>) 
+        was an Irish recipient of the Victoria Cross, the most prestigious award for gallantry 
+        in the face of the enemy that can be awarded to British and Commonwealth forces. <br /> 
+        <span property="sameAs"><br />
+        <a href="http://en.wikipedia.org/wiki/Michael_John_O%27Leary">http://en.wikipedia.org/wiki/Michael_John_O%27Leary</a>
+        </span></p>
+    </div>
+    <div id="RDFaRevealed" class="step" data-y="6000" data-x="0" data-rotate-y="90" data-rotate-x="90" data-z="-4800">
         <p>
-        Major Michael John O'Leary VC (29 September 1890 – 2 August 1961) was an Irish recipient of the Victoria Cross, the most prestigious award for gallantry in the face of the enemy that can be awarded to British and Commonwealth forces. O'Leary achieved his award for single-handedly charging and destroying two German barricades defended by machine gun positions near the French village of Cuinchy, in a localised operation on the Western Front during the First World War.</p>
-        <p class="caption"> <a href="http://en.wikipedia.org/wiki/Michael_John_O%27Leary">http://en.wikipedia.org/wiki/Michael_John_O%27Leary</a></p>
+        &lt;p vocab="http://schema.org/" typeof="Person"&gt;<br />
+        &nbsp;&nbsp;&lt;span property="honorificPrefix"&gt;Major&lt;/span&gt;<br />
+        &nbsp;&nbsp;&lt;span property="name"&gt;Michael John O'Leary&lt;/span&gt;<br />
+        &nbsp;&nbsp;&lt;span property="award"&gt;VC&lt;/span&gt;<br />
+        &nbsp;&nbsp;(&lt;span property="birthdate"&gt;29 September 1890&lt;/span&gt;<br /> – &lt;span property="deathdate"&gt;2 August 1961&lt;/span&gt;)<br />
+        was an Irish recipient of the Victoria Cross, the most prestigious award for gallantry 
+        in the face of the enemy that can be awarded to British and Commonwealth forces.<br />
+        &lt;span property="sameAs"&gt;<br />
+        &nbsp;&nbsp; &lt;a href="http://en.wikipedia.org/wiki/Michael_John_O%27Leary"&gt;<br />
+        &nbsp;&nbsp; &nbsp;&nbsp;http://en.wikipedia.org/wiki/Michael_John_O%27Leary<br />
+         &nbsp;&nbsp;&lt;/a&gt;<br />
+        &lt;/span&gt;<br />
+        &lt;/p&gt;
+        </p>
+        <div class="notes">
+            Key question: is this <em>complete</em> with respect to schema, with respect to use cases?
+        </div>
+        
     </div>
     <!-- Part 3 -->
     <div id="publishing" class="step" data-y="7200" data-x="-1200">
@@ -250,12 +279,12 @@ Yapp style bindings</p>
     <div id="resources" class="step" data-x="1200" data-y="9600">
         <div>
             <ul><li><a href="http://www.w3.org/TR/rdf11-primer/">http://www.w3.org/TR/rdf11-primer/</a></li></ul>
-            <ul><li><a href="http://lov.okfn.org/dataset/lov/search/">http://lov.okfn.org/dataset/lov/search/</a></li></ul>
-            <ul><li><a href=""></a></li></ul>
-            <ul><li><a href=""></a></li></ul>
-            <ul><li><a href=""></a></li></ul>
-            <ul><li><a href=""></a></li></ul>
-            <ul><li><a href=""></a></li></ul>
+            <li><a href="http://lov.okfn.org/dataset/lov/search/">http://lov.okfn.org/dataset/lov/search/</a></li>
+            <li><a href="http://rdfa.info/">http://rdfa.info/</a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li></ul>
                     </div>
     </div>
 

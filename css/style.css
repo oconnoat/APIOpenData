@@ -56,7 +56,10 @@
     width: 75%;
     font-size: 36px;
 }
-
+#voctaxont li {
+    margin-bottom: 3%;
+    font-size: 24px;
+}
 #lodwww {
     background-image: url('../img/robots.jpg');
     background-repeat: no-repeat;
@@ -67,7 +70,7 @@
 
 }
 #enrichingAPoster {
-    background-color: #ccc;
+    background-color: rgb(72,72,72);
 }
 #enrichingAPoster img {
     height: 90vh;
@@ -75,10 +78,13 @@
     left: 30%;
 }
 #olearyGraph img{
-    max-height: 90vh;
+    height: 90%;
 }
 #posterGraph{
     font-size: 18px;
+}
+#LOD img{
+    height: 85%;
 }
 #openness img {
     height: 100%;
@@ -88,6 +94,14 @@
     float: right;
 }
 
+#RDFa {
+    font-size: 24px;
+}
+
+#RDFaRevealed p {
+    font-size: 18px;
+    font-family: monospace;
+}
 span.mono {
     font-family: monospace;
 }
