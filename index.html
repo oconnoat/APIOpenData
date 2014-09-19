@@ -2,6 +2,9 @@
 <!-- Based on impress.js Copyright 2011-2012 Bartek Szopka
 
 Released under the MIT and GPL (version 2 or later) Licenses.
+
+Note, this is a total mess of inconsistent css, html, javascript and content. 
+It's probably a good example of how difficult it is for me to separate content with presentation in practice.
 -->
 
 <html lang="en">
@@ -44,13 +47,19 @@ Released under the MIT and GPL (version 2 or later) Licenses.
 
     <div id="title" class="step" data-x="0" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
         <h1>Linked Data &amp; the Semantic Web&mdash;Making Human Knowledge <span class="mono">Programmable</span></h1>
-        
+        <div id="authorInfo"> 
         <h2>Alexander O&apos;Connor,<br />
         <a href="http://www.cngl.ie">CNGL</a> Centre for Global Intelligent Content,<br /> 
         <a href="http://kdeg.scss.tcd.ie">KDEG</a>, School of Computer Science &amp; Statistics,<br />
         Trinity College Dublin, Ireland.</h2>
         <h3><i class="fa fa-twitter"></i>
             <a href="http://www.twitter.com/uberalex">@uberalex</a></h3>
+        </div>
+        <div id="logos">
+            <img src="img/cngl.jpg" height="50" /><img src="img/cendari.png" height="50"><img src="" height="50"/>
+            <p>This research is supported by the Science Foundation Ireland (Grant 12/CE/I2267) 
+as part of the Centre for Next Generation Localisation at Trinity College Dublin.</p>
+                    </div>
     </div>
     <div id="talkAnatomy" class="step" data-x="1200" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
         <ol>
@@ -138,18 +147,48 @@ Yapp style bindings</p>
             <li><i class="fa fa-sitemap fa-lg"></i> Ontology: <br />Terms &amp; Concepts &amp; Relationships &amp; Data</li>
         </ul>
     </div>
-    <div id="RDF" class="step" data-x="-1200" data-y="2400">
-        <div id="RDFGraph"></div>
-    </div>
     <div id="triple" class="step" data-x="0" data-y="2400">
-        <div id="TripleGraph"></div>
+        <p><span class="subject">Subject</span>&mdash;<span class="predicate">Predicate</span>&mdash;<span class="object">Object</span></p>
+        <table>
+            <tr><th></th><th>Year</th><th>City</th></tr>
+            <tr class="subject"><td>i</td><td class="object">1979</td><td class="object">Krakow</td></tr>
+            <tr class="subject"><td>ii</td><td class="object">2012</td><td class="object">Munich</td></tr>
+            <tr class="subject"><td>iii</td><td class="object">2014</td><td class="object">Buenos Aires</td></tr>
+        </table>
     </div>
+     <div id="RDF" class="step" data-x="-1200" data-y="2400">
+         <img src="img/rdfgraph.png" />
+         <div class="notes">This gets assembled into a graph structure, which can then be traversed algorithmically</div>
+     </div>
     <div id="schemasandOwl" class="step" data-x="1200" data-y="2400">
+        <h1>Schema</h1>
+        <div>
+            <ul>
+        <li><span class="cursive">Class:</span> <em>a group of instances with common properties</em></li>
+        <li>An individual <span class="cursive">is a</span> class</li>
+        <li>Individuals have properties with values</li>
+            </ul>
+        </div>
+        <img src="img/three.png" />
+    </div>
+    <div id="schemasandOwl2" class="step" data-x="1200" data-y="2400" data-z="-1000" data-rotate-y="90">
+        <h1>OWL&mdash;Web Ontology Language</h1>
+        <div>
+            <ul>
+
+                <li>Classes can have rich <strong>semantics</strong>.</li>
+                <li>Reasoning using OWL allows creation of <strong>new knowledge</strong>.
+                <li>Don't re-invent <span class="mono">RDF:Wheel</mono>!
+            </ul>
+        </div>
+        <div>
+            <img src="img/semanticstack.png" />
+        </div>
     </div>
     <!-- Part 2 -->
     <div id="consumingandenriching" class="step" data-x="-1200" data-y="3600">
 
-        <div class="notes">have a notion of semantics, but how do we actually use that to improve what we have?</div>
+        <div class="notes"><p>have a notion of semantics, but how do we actually use that to improve what we have?</p></div>
     </div>
     <div id="LOD" class="step" data-x="0" data-y="3600">
         <!-- cloud here-->
@@ -158,14 +197,17 @@ Yapp style bindings</p>
 
     </div>
     <div id="gatheringData" class="step" data-x="1200" data-y="4800">
-        <div class="notes">We can leverage the open ness of the LOD web to get our hands on concepts, on data, on terms, and link it all together to get a network effect.</div>
+        <div class="notes">We can leverage the openness of the LOD web to get our hands on concepts, on data, on terms, and link it all together to get a network effect.</div>
     </div>
     <div id="sparql" class="step" data-x="2400" data-y="4800">
-        <!-- 3 or four example queries here -->
-        <!-- as a question -->
-        <!-- refer to another description of a thing -->
-        <!-- extend our facts and disambiguate -->
-        dbpedia.org/snorql
+        <img src="img/otomo_escher_fireball.jpg" />
+        <h1>Select, Describe, Construct, Ask</h1>
+        <ol>
+            <li><a href="http://dbpedia.org/snorql">DBPedia</a></li>
+            <li><a href="http://www.geosparql.org/">Geonames</a></li>
+            <li><a href="http://europeana.ontotext.com/">Europeana</a></li>
+        </ol>
+        <h1>Graph, Table, XML, JSON, Text</h1>
     </div>
     <div id="enrichingContent" class="step" data-x="-1200" data-y="6000">
         <div class="notes"><h1>What to enrich and how?</h1>
@@ -287,7 +329,7 @@ Yapp style bindings</p>
     </div>
 
     <!-- Conclusions -->
-    <div id="openness" class="step" data-y="9600" data-x="0">
+    <div id="openness" class="step" data-y="8200" data-x="0">
         <img src="img/borrowcup.png" />
         <div id="nonfunc">
             <ul>
@@ -304,7 +346,7 @@ Yapp style bindings</p>
            It also has to be sustained: that means using what's already out there, and being aware that you need to maintain it. 
         </div>
     </div>
-    <div id="resources" class="step" data-x="1200" data-y="9600">
+    <div id="resources" class="step" data-x="1200" data-y="8200">
         <div>
             <ul><li><a href="http://www.w3.org/TR/rdf11-primer/">http://www.w3.org/TR/rdf11-primer/</a></li>
             <li><a href="http://lov.okfn.org/dataset/lov/search/">http://lov.okfn.org/dataset/lov/search/</a></li>
@@ -317,7 +359,7 @@ Yapp style bindings</p>
     </div>
 
     <!-- keep an overview slide -->
-    <div id="overview" class="step" data-x="2400" data-y="1200" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="10">
+    <div id="overview" class="step" data-x="2400" data-y="4000" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="12">
     </div>
 
 </div>
@@ -349,17 +391,12 @@ if ("ontouchstart" in document.documentElement) {
 
 <!-- LESS CSS -->
 <script src="js/less.min.js"></script>
-<!-- D3 JS -->
-<script src="js/d3.v3.min.js" charset="utf-8"></script>
 <!-- Load the presentation tool -->
 <script src="js/impress.js"></script>
 <!-- Load the timer -->
 <script src="js/timer.js"></script>
 <!-- Menu -->
 <script src="js/navmenu.js"></script>
-
-<!-- Load the D3 graphs -->
-<script src="js/diagrams.js"></script>
 
 <!-- Initialisation -->
 <script>impress().init();</script>

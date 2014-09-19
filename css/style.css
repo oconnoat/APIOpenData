@@ -23,6 +23,10 @@
     width: 80vw;
     height: 90vh;
 }
+
+.cursive {
+    font-family: cursive;
+}
 /* Impress-related markup */
 .impress-enabled .step.active {
     background-color: #fff;:
@@ -52,7 +56,31 @@
     background-width: 100%;
 
 }
+.impress-on-schemasandOwl{
+ /*remember that this is in the css directory */
+    background-image: url('../img/superfamoussilo.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-height: 100%;
+    background-width: 100%;
 
+}
+.impress-on-schemasandOwl2{
+ /*remember that this is in the css directory */
+    background-image: url('../img/superfamousdoor.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-height: 100%;
+    background-width: 100%;
+
+}
+
+.impress-on-overview div:hover{
+    opacity: 1;
+    background-color: #fff;
+}
 /* specific divs */
 #title h1{
     font-size: 48px;
@@ -63,6 +91,20 @@
     font-size:36px;
     font-family: sans-serif;
 } 
+#title #authorInfo{
+    position: relative;
+    top: 10%;
+    left: 10%;
+}
+
+#title #logos {
+    position: absolute;
+    bottom: 0;
+    font-size: 10px;
+}
+#title #logos ul{
+
+}
 #talkAnatomy {
     background: none;
 }
@@ -117,6 +159,64 @@
     left: 50%;
     margin-left: -294px;
 }
+#triple p{
+    font-size: 64px;
+    text-align: justify;
+    font-family: monospace;
+}
+#triple table{
+    border: 1px solid black;
+    text-align: center;
+    border-collapse: none;
+    position: absolute;
+    left: 10%;
+    bottom: 10%;
+}
+#triple table tr td {
+    margin: 1px;
+}
+#triple span.predicate, #triple table tr th:hover, #triple table tr th:hover ~ #triple table tr td {
+    background-color: rgba(255, 128,128, 0.66);
+}
+#triple span.subject, #triple table tr.subject:hover {
+    color: green;
+}
+#triple span.object, #triple table tr td.object:hover{
+     background-color: rgba(128,128,255, 0.66);
+}
+#schemasandOwl{
+    background-color: rgba(255,255,255,0.66);
+}
+#schemasandOwl div{
+    width: 88%;
+    float: left;
+    margin: 1%;
+}
+#schemasandOwl img{
+    height: 35%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+#schemasandOwl ul{
+    list-style-type: circle;
+    list-style-position: outside;
+    
+}
+#schemasandOwl2{
+    background-color: rgba(255,255,255,0.66);
+}
+#schemasandOwl2 div{
+    width: 48%;
+    float: left;
+    margin: 1%;
+}
+#schemasandOwl2 ul{
+    list-style-type: circle;
+    list-style-position: outside;
+    
+}
 #gatheringData{
     background-image: url('../img/consumebustart.jpg');
     background-repeat: no-repeat;
@@ -124,6 +224,19 @@
     background-size: cover;
     background-height: 100%;
     background-width: 100%;
+}
+
+#sparql {
+    text-align: left;
+    font-family: monospace;
+}
+#sparql h1{
+    text-align: center;
+}
+#sparql img {
+    margin-right: 1%;
+    float: left;
+    height: 100%;
 }
 
 #voctaxont {
@@ -177,7 +290,7 @@
     background-width: 100%;
 }
 #enrichingAPoster {
-    background-color: rgb(74,74,74);
+    background-color: rgb(190,180,170);
 }
 #enrichingAPoster img {
     height: 90%;
@@ -199,6 +312,9 @@
 }
 #posterGraph{
     font-size: 18px;
+}
+#posterGraph table tr td{
+    background-color: rgba(160, 150, 190, 0.66);
 }
 #LOD img{
     height: 85%;
@@ -233,7 +349,9 @@ margin-left: -300px;
 #RDFa {
     font-size: 24px;
 }
-
+#RDF img{
+    height: 100%;
+}
 #endpoint{
     /*remember that this is in the css directory */
     background-image: url('../img/jaymantridonotenter.jpg');
@@ -266,4 +384,8 @@ span.mono {
     font-style: bold;
     font-size: 10px;
     text-align: right;
+}
+
+#RDF svg circle:hover{
+    fill: blue;
 }
