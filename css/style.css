@@ -92,9 +92,6 @@
     font-family: sans-serif;
 } 
 #title #authorInfo{
-    position: relative;
-    top: 10%;
-    left: 10%;
 }
 
 #title #logos {
@@ -103,7 +100,10 @@
     font-size: 10px;
 }
 #title #logos ul{
-
+    text-align: center;
+}
+#title #logos ul li{
+    display: inline;
 }
 #talkAnatomy {
     background: none;
